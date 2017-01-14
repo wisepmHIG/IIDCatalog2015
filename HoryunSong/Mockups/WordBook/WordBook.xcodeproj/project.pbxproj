@@ -12,7 +12,7 @@
 		EC86DE7B1C04449900E36CD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC86DE791C04449900E36CD4 /* Main.storyboard */; };
 		EC86DE7D1C04449900E36CD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC86DE7C1C04449900E36CD4 /* Assets.xcassets */; };
 		EC86DE801C04449900E36CD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC86DE7E1C04449900E36CD4 /* LaunchScreen.storyboard */; };
-		ECAF98A31C05C73C008A9C8D /* UIViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAF98A21C05C73C008A9C8D /* UIViewController+Navigation.swift */; settings = {ASSET_TAGS = (); }; };
+		ECAF98A31C05C73C008A9C8D /* UIViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAF98A21C05C73C008A9C8D /* UIViewController+Navigation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +98,7 @@
 				TargetAttributes = {
 					EC86DE711C04449900E36CD4 = {
 						CreatedOnToolsVersion = 7.0.1;
+						LastSwiftMigration = 0820;
 					};
 				};
 			};
@@ -256,6 +257,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test1.WordBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -267,6 +269,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test1.WordBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

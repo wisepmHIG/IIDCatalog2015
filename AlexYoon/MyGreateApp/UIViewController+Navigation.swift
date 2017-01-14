@@ -17,11 +17,11 @@ private var tapKBDismiss : Bool = false
 
 public extension UIViewController {
     
-    @IBAction func modalDismiss(sender : AnyObject){
-        self.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func modalDismiss(_ sender : AnyObject){
+        self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func modalDismissPush(sender : AnyObject){
+    @IBAction func modalDismissPush(_ sender : AnyObject){
         var destVC : UIViewController! = nil
         if let presentingVC = self.presentingViewController as? UITabBarController {
             if let tempVC = presentingVC.selectedViewController as? UINavigationController {
@@ -35,37 +35,37 @@ public extension UIViewController {
             destVC = self.presentingViewController
         }
         
-        destVC.performSegueWithIdentifier("ModalDismissPush", sender: nil)
-        self.dismissViewControllerAnimated(true, completion: nil)
+        destVC.performSegue(withIdentifier: "ModalDismissPush", sender: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
     
     
-    @IBAction func navigationBack(sender : AnyObject){
+    @IBAction func navigationBack(_ sender : AnyObject){
         if let navigationCongtroller = self.navigationController {
-            navigationController?.popViewControllerAnimated(true)
+            navigationController?.popViewController(animated: true)
         }
     }
     
-    @IBAction func navigationBackToRoot(sender : AnyObject){
+    @IBAction func navigationBackToRoot(_ sender : AnyObject){
         if let navigationCongtroller = self.navigationController {
-            navigationController?.popToRootViewControllerAnimated(true)
+            navigationController?.popToRootViewController(animated: true)
         }
     }
     
-    @IBAction func keyboardDismiss(sender: AnyObject) {
+    @IBAction func keyboardDismiss(_ sender: AnyObject) {
         for view in self.view.subviews {
             view.resignFirstResponder()
         }
     }
     
-    @IBAction func openPhotoLibrary(sender: AnyObject) {
+    @IBAction func openPhotoLibrary(_ sender: AnyObject) {
         
         let imagePickerController = UIImagePickerController()
         //imagePickerController.delegate = sender
-        imagePickerController.sourceType = UIImagePickerControllerSourceType.SavedPhotosAlbum
+        imagePickerController.sourceType = UIImagePickerControllerSourceType.savedPhotosAlbum
         imagePickerController.allowsEditing = true
-        self.presentViewController(imagePickerController, animated: true, completion: { imageP in
+        self.present(imagePickerController, animated: true, completion: { imageP in
             
         })
     }
